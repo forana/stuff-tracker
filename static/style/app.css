@@ -1,0 +1,30 @@
+#content {
+    padding-left: 180px;
+}
+
+#nav {
+    background-color: rgb(37, 42, 58);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 180px;
+    height: 100%;
+}
+
+@media (max-width: 40em) {
+    #content {
+        padding-left: 0;
+    }
+
+    #nav {
+        position: relative;
+        width: 100%;
+        height: 40px;
+    }
+
+    #nav .pure-menu-item,
+    #nav .pure-menu-list,
+    #nav .pure-menu-heading {
+        display: inline-block;
+    }
+}

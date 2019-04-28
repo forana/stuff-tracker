@@ -1,0 +1,22 @@
+<div class="pure-header"><h1>Recently Added</h1></div>
+<table class="pure-table pure-table-bordered">
+    <thead>
+        <th>Thumbnail</th>
+        <th>Category</th>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Location</th>
+    </head>
+    <tbody>
+        <tr ng-repeat="item in items track by $index">
+            <td><img ng-src="{{item.image.thumb}}" width="50"/></td>
+            <td>
+                <span ng-repeat="category in item.categories">
+                    <span ng-show="$index !== 0">&raquo;</span>
+                    <a ui-sref="category({id: category.id})">{{category.name}}</a>
+                </span>
+            </td>
+            <td>{{item.name}}</td>
+        </tr>
+    </tbody>
+</table>
